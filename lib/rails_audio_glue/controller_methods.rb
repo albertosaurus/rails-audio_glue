@@ -1,4 +1,5 @@
 module RailsAudioGlue
+  # Provides +send_glued_audio+ method for ApplicationController.
   module ControllerMethods
     # Mapper for audio formats and mime types. If format is unknown it will be
     # generating dynamically using proc.
