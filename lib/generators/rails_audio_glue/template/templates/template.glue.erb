@@ -1,0 +1,10 @@
+head {
+  format :mp3
+  rate 44100
+  channels 1
+}
+
+body {
+  - file('/path/to/file.wav')
+  - url('http://server.com/audio.mp3')
+}

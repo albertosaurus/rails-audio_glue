@@ -7,4 +7,3 @@ Example:
     This will:
         Create initializer: config/initializers/audio_glue.rb
         Create helper:      app/audio_templates/audio_glue_helper.rb
-
