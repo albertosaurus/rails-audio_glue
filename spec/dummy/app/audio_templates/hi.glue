@@ -1,0 +1,12 @@
+head {
+  format :mp3
+  rate 44100
+  channels 1
+}
+
+body {
+  - file('/audio/hi.mp3')
+  if @smalltalk
+    - url('http://remote.com/how-are-you.wav')
+  end
+}

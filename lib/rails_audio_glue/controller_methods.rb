@@ -23,7 +23,7 @@ module RailsAudioGlue
     def send_glued_audio(template_name, variables = {})
       # Reset cache in development so we don't need to restart server to see
       # changes in glue template.
-      RailsAudioGlue.loader.reset_cache! if Rails.application.development?
+      RailsAudioGlue.loader.reset_cache! if Rails.env.development?
 
       template = RailsAudioGlue.loader.get(template_name).new(variables)
       data = RailsAudioGlue.builder.build(template)
