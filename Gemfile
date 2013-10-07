@@ -15,4 +15,5 @@ group :development, :test do
   gem "yard"
   gem 'sqlite3'
   gem 'pry'
+  gem 'simplecov'
 end

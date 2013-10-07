@@ -5,6 +5,11 @@ require 'rails/all'
 require 'rspec/rails'
 require 'rspec'
 
+require 'simplecov'
+SimpleCov.start do
+  add_filter '/spec/'
+end
+
 require 'rails-audio_glue'
 
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
