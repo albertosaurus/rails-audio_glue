@@ -1,7 +1,7 @@
 # Rails AudioGlue
 
-Rails plugin which integrates AudioGlue - library to assemble audio from chunks
-with templates.
+Rails plugin which integrates AudioGlue - library to assemble audio from snippets
+using templates.
 
 ## Usage
 
@@ -11,7 +11,7 @@ After adding `gem 'rails-audio_glue'` to `Gemfile` and running `bundle`,
 run generator to install the basic stuff:
 
 ```
-rails generate rails_audio_glue:install
+rails g rails_audio_glue:install
 
     create  config/initializers/audio_glue.rb
     create  app/audio_templates/audio_glue_helper.rb
@@ -22,13 +22,13 @@ rails generate rails_audio_glue:install
 Now generate your first audio template:
 
 ```
-rails generate rails_audio_glue:template hello_world
+rails g rails_audio_glue:template hello_world
 
     create  app/audio_templates/hello_world.glue
 ```
 
 To get more info about `.glue` templates read
-[AudioGlue's README](https://github.com/TMXCredit/audio_glue/)
+[AudioGlue's README](https://github.com/TMXCredit/audio_glue/).
 
 Assume you have the following `hello_world.glue` in `app/audio_templates`:
 
@@ -48,7 +48,7 @@ body {
 ```
 
 The output file parameters are described in `head` section and
-the content is described in `body` section. It's all pure ruby code.
+the content is described in `body` section. It's all a pure ruby code.
 
 ### Sending audio from controller
 
@@ -72,8 +72,9 @@ end
 
 ### Using helpers
 
-To extend `body` section with custom methods you need to define them in
-`AudioGlueHelper`, e.g.:
+To extend `body` template section with custom methods you need
+to define them in `AudioGlueHelper`. Usually they are supposed to based
+upon `file` and `url` methods.
 
 ```ruby
 module AudioGlueHelper
