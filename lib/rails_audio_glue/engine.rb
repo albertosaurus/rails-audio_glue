@@ -2,7 +2,7 @@
 module RailsAudioGlue
   # :nodoc:
   class Engine < Rails::Engine
-    initializer 'rails_audio_glue' do
+    initializer 'audio_glue' do
       ::ApplicationController.send(:include, RailsAudioGlue::ControllerMethods)
     end
   end
