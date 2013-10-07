@@ -8,25 +8,17 @@ Gem::Specification.new do |s|
   s.version = "0.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Potapov Sergey"]
+  s.authors = ["TMX Credit", "Potapov Sergey"]
   s.date = "2013-10-07"
   s.description = "AudioGlue is audio template engine(aka ERB for sounds)"
-  s.email = "blake131313@gmail.com"
+  s.email = ["rubygems@tmxcredit.com", "blake131313@gmail.com"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.rdoc"
+    "README.markdown"
   ]
   s.files = [
-    ".document",
-    ".rspec",
-    ".ruby-gemset",
-    ".ruby-version",
-    "Gemfile",
-    "Gemfile.lock",
     "LICENSE.txt",
-    "README.rdoc",
-    "Rakefile",
-    "VERSION",
+    "README.markdown",
     "lib/generators/rails_audio_glue/install/USAGE",
     "lib/generators/rails_audio_glue/install/install_generator.rb",
     "lib/generators/rails_audio_glue/install/templates/audio_glue_helper.rb.erb",
@@ -37,9 +29,7 @@ Gem::Specification.new do |s|
     "lib/rails-audio_glue.rb",
     "lib/rails_audio_glue.rb",
     "lib/rails_audio_glue/controller_methods.rb",
-    "lib/rails_audio_glue/engine.rb",
-    "spec/lib/rails_audio_glue_spec.rb",
-    "spec/spec_helper.rb"
+    "lib/rails_audio_glue/engine.rb"
   ]
   s.homepage = "http://github.com/greyblake/rails-audio_glue"
   s.licenses = ["MIT"]
@@ -52,29 +42,41 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<ruby-sox>, [">= 0"])
-      s.add_runtime_dependency(%q<rails>, ["> 3.0"])
       s.add_runtime_dependency(%q<audio_glue>, [">= 0"])
+      s.add_runtime_dependency(%q<rails>, ["> 3.0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.14.1"])
+      s.add_development_dependency(%q<rspec-rails>, ["~> 2.14.0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.8.7"])
       s.add_development_dependency(%q<yard>, [">= 0"])
+      s.add_development_dependency(%q<sqlite3>, [">= 0"])
+      s.add_development_dependency(%q<pry>, [">= 0"])
+      s.add_development_dependency(%q<simplecov>, [">= 0"])
     else
       s.add_dependency(%q<ruby-sox>, [">= 0"])
-      s.add_dependency(%q<rails>, ["> 3.0"])
       s.add_dependency(%q<audio_glue>, [">= 0"])
+      s.add_dependency(%q<rails>, ["> 3.0"])
       s.add_dependency(%q<rspec>, ["~> 2.14.1"])
+      s.add_dependency(%q<rspec-rails>, ["~> 2.14.0"])
       s.add_dependency(%q<bundler>, ["~> 1.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.8.7"])
       s.add_dependency(%q<yard>, [">= 0"])
+      s.add_dependency(%q<sqlite3>, [">= 0"])
+      s.add_dependency(%q<pry>, [">= 0"])
+      s.add_dependency(%q<simplecov>, [">= 0"])
     end
   else
     s.add_dependency(%q<ruby-sox>, [">= 0"])
-    s.add_dependency(%q<rails>, ["> 3.0"])
     s.add_dependency(%q<audio_glue>, [">= 0"])
+    s.add_dependency(%q<rails>, ["> 3.0"])
     s.add_dependency(%q<rspec>, ["~> 2.14.1"])
+    s.add_dependency(%q<rspec-rails>, ["~> 2.14.0"])
     s.add_dependency(%q<bundler>, ["~> 1.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.8.7"])
     s.add_dependency(%q<yard>, [">= 0"])
+    s.add_dependency(%q<sqlite3>, [">= 0"])
+    s.add_dependency(%q<pry>, [">= 0"])
+    s.add_dependency(%q<simplecov>, [">= 0"])
   end
 end
 
