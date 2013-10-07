@@ -1,4 +1,3 @@
-# Rails plugin which integrates AudioGlue library.
 module RailsAudioGlue
   # :nodoc:
   class Engine < Rails::Engine
