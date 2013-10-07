@@ -7,8 +7,8 @@ with templates.
 
 ### Install
 
-After adding `gem 'rails-audio_glue' to `Gemfile` and running `bundle`,
-run generator to install basic stuff:
+After adding `gem 'rails-audio_glue'` to `Gemfile` and running `bundle`,
+run generator to install the basic stuff:
 
 ```
 rails generate rails_audio_glue:install
@@ -27,10 +27,10 @@ rails generate rails_audio_glue:template hello_world
     create  app/audio_templates/hello_world.glue
 ```
 
-To more information about `.glue` templates read README of
-[AudioGlue](https://github.com/TMXCredit/audio_glue/).
+To get more info about `.glue` templates read
+[AudioGlue's README](https://github.com/TMXCredit/audio_glue/)
 
-Anyway, assume you have the following `hello_world.glue` in `app/audio_templates`:
+Assume you have the following `hello_world.glue` in `app/audio_templates`:
 
 ```ruby
 head {
@@ -40,9 +40,9 @@ head {
 }
 
 body {
-  - file('/path/to/audio/hello.wav')
+  - file("/path/to/audio/hello.wav")
   if @say_bye
-    - url('http://some-server.com/say/bye.mp3')
+    - url("http://some-server.com/say/bye.mp3")
   end
 }
 ```
@@ -52,9 +52,9 @@ the content is described in `body` section. It's all pure ruby code.
 
 ### Sending audio from controller
 
-To build audio file according to a template and send it user `send_glued_audio`
-controller method. It receives a template name and variables as arguments and
-is built upon  `send_data` method:
+To build audio file according to a template and send it user use `send_glued_audio`
+controller method. It receives a template name and template variables
+as arguments and is built upon `send_data` method:
 
 ```ruby
 class HelloController < ApplicationController
@@ -72,9 +72,10 @@ end
 
 ### Using helpers
 
-To extend `body` section with custom methods you need define them in `AudioGlueHelper`, e.g.:
+To extend `body` section with custom methods you need to define them in
+`AudioGlueHelper`, e.g.:
 
-```
+```ruby
 module AudioGlueHelper
   # The some-speaking-service is supposed to return audio file
   def say(text)
@@ -87,15 +88,10 @@ Now you can use `say` method in `body` template section:
 
 ```ruby
 body {
-  - file('/path/to/audio/hello.wav')
+  - file("/path/to/audio/hello.wav")
   - say("What's up?")
 }
 ```
-
-
-
-
-
 
 
 ## Credits
@@ -105,4 +101,3 @@ body {
 ## Copyright
 
 Copyright (c) 2013 TMX Credit.
-
