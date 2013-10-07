@@ -1,0 +1,108 @@
+# Rails AudioGlue
+
+Rails plugin which integrates AudioGlue - library to assemble audio from chunks
+with templates.
+
+## Usage
+
+### Install
+
+After adding `gem 'rails-audio_glue' to `Gemfile` and running `bundle`,
+run generator to install basic stuff:
+
+```
+rails generate rails_audio_glue:install
+
+    create  config/initializers/audio_glue.rb
+    create  app/audio_templates/audio_glue_helper.rb
+```
+
+### Audio templates
+
+Now generate your first audio template:
+
+```
+rails generate rails_audio_glue:template hello_world
+
+    create  app/audio_templates/hello_world.glue
+```
+
+To more information about `.glue` templates read README of
+[AudioGlue](https://github.com/TMXCredit/audio_glue/).
+
+Anyway, assume you have the following `hello_world.glue` in `app/audio_templates`:
+
+```ruby
+head {
+  format :mp3
+  rate 44100
+  channels 1
+}
+
+body {
+  - file('/path/to/audio/hello.wav')
+  if @say_bye
+    - url('http://some-server.com/say/bye.mp3')
+  end
+}
+```
+
+The output file parameters are described in `head` section and
+the content is described in `body` section. It's all pure ruby code.
+
+### Sending audio from controller
+
+To build audio file according to a template and send it user `send_glued_audio`
+controller method. It receives a template name and variables as arguments and
+is built upon  `send_data` method:
+
+```ruby
+class HelloController < ApplicationController
+  # Covert hello.wav to mp3 and send it as hello_world.mp3
+  def hi
+    send_glued_audio('hello_world', :say_bye => false)
+  end
+
+  # Concatenate hello.wav and bye.mp3, convert to mp3, and send as hello_world.mp3
+  def hi_and_bye
+    send_glued_audio('hello_world', :say_bye => true)
+  end
+end
+```
+
+### Using helpers
+
+To extend `body` section with custom methods you need define them in `AudioGlueHelper`, e.g.:
+
+```
+module AudioGlueHelper
+  # The some-speaking-service is supposed to return audio file
+  def say(text)
+    url("http://some-speaking-service.com/say/#{text}")
+  end
+end
+```
+
+Now you can use `say` method in `body` template section:
+
+```ruby
+body {
+  - file('/path/to/audio/hello.wav')
+  - say("What's up?")
+}
+```
+
+
+
+
+
+
+
+## Credits
+
+* [Sergey Potapov](https://github.com/greyblake)
+
+## Copyright
+
+Copyright (c) 2013 TMX Credit.
+
