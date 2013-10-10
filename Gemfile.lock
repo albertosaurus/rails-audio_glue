@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:TMXCredit/audio_glue.git
-  revision: 16d88c0fa318f536780034853bb854e124a4b5a1
+  revision: e69fb67ec09c1ee19ee59224af409faf46393168
   branch: 12148_audio_glue
   specs:
     audio_glue (0.0.1)
