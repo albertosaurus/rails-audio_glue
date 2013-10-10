@@ -13,23 +13,27 @@ module RailsAudioGlue
     }
     GLUE_MIME_TYPES.default_proc = lambda { |hash, key| "audio/#{key}"}
 
-    # Assemble audio using according to the passed template and variables and
-    # send it as data.
+    # Assemble the audio using the passed template and variables.
+    # And send it as data.
     #
     # @param template_name [String] name of template in app/audio_templates
     # @param variables [Hash] instance variables to initiate template.
     #
     # @return [void]
     def send_glued_audio(template_name, variables = {})
-      # Reset cache in development so we don't need to restart server to see
-      # changes in glue template.
-      RailsAudioGlue.loader.reset_cache! if Rails.env.development?
+      loader  = RailsAudioGlue.loader
+      builder = RailsAudioGlue.builder
 
-      template = RailsAudioGlue.loader.get(template_name).new(variables)
-      data = RailsAudioGlue.builder.build(template)
+      # Reset the cache in development so we don't need to restart the server
+      # to see changes in the glue template.
+      loader.reset_cache! if Rails.env.development?
 
-      filename = "#{File.basename(template_name)}.#{template.format}"
-      mime_type = GLUE_MIME_TYPES[template.format]
+      template = loader.get(template_name).new(variables)
+      data     = builder.build(template)
+
+      format    = template.format
+      filename  = "#{File.basename(template_name)}.#{format}"
+      mime_type = GLUE_MIME_TYPES[format]
 
       send_data(data, :filename => filename, :type => mime_type)
     end
