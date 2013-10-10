@@ -12,7 +12,8 @@ module RailsAudioGlue
 
       # :nodoc:
       def create_audio_glue_helper
-        template 'audio_glue_helper.rb.erb', "#{RailsAudioGlue::TEMPLATES_PATH}/audio_glue_helper.rb"
+        template 'audio_glue_helper.rb.erb',
+                 "#{RailsAudioGlue::TEMPLATES_PATH}/audio_glue_helper.rb"
       end
 
     end

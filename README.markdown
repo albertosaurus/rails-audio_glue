@@ -1,16 +1,16 @@
 # Rails AudioGlue
 
-Rails plugin which integrates AudioGlue - library to assemble audio from snippets
-using templates.
+A Rails plugin which integrates AudioGlue - a library used to assemble audio
+from snippets using templates.
 
 ## Usage
 
 ### Install
 
 After adding `gem 'rails-audio_glue'` to `Gemfile` and running `bundle`,
-run generator to install the basic stuff:
+run the generator to install the basic stuff:
 
-```
+```sh
 rails g rails_audio_glue:install
 
     create  config/initializers/audio_glue.rb
@@ -21,7 +21,7 @@ rails g rails_audio_glue:install
 
 Now generate your first audio template:
 
-```
+```sh
 rails g rails_audio_glue:template hello_world
 
     create  app/audio_templates/hello_world.glue
@@ -30,7 +30,7 @@ rails g rails_audio_glue:template hello_world
 To get more info about `.glue` templates read
 [AudioGlue's README](https://github.com/TMXCredit/audio_glue/).
 
-Assume you have the following `hello_world.glue` in `app/audio_templates`:
+Ensure you have the following `hello_world.glue` in `app/audio_templates`:
 
 ```ruby
 head {
@@ -47,23 +47,24 @@ body {
 }
 ```
 
-The output file parameters are described in `head` section and
-the content is described in `body` section. It's all a pure ruby code.
+The output file parameters are described in the `head` section. And
+the content is described in the `body` section. It's all pure ruby code.
 
 ### Sending audio from controller
 
-To build audio file according to a template and send it user use `send_glued_audio`
-controller method. It receives a template name and template variables
-as arguments and is built upon `send_data` method:
+To build an audio file using a template and send it to a user, use the
+`send_glued_audio` controller method. It receives a template name and template
+variables as arguments and is built upon the `send_data` method:
 
 ```ruby
 class HelloController < ApplicationController
-  # Covert hello.wav to mp3 and send it as hello_world.mp3
+  # Convert hello.wav to mp3 and send it as hello_world.mp3:
   def hi
     send_glued_audio('hello_world', :say_bye => false)
   end
 
-  # Concatenate hello.wav and bye.mp3, convert to mp3, and send as hello_world.mp3
+  # Concatenate hello.wav and bye.mp3, convert to mp3, and send
+  # as hello_world.mp3:
   def hi_and_bye
     send_glued_audio('hello_world', :say_bye => true)
   end
@@ -72,20 +73,20 @@ end
 
 ### Using helpers
 
-To extend `body` template section with custom methods you need
-to define them in `AudioGlueHelper`. Usually they are supposed to based
-upon `file` and `url` methods.
+To extend the `body` template section with custom methods, you need
+to define them in `AudioGlueHelper`. Usually, they are supposed to based
+upon the `file` and `url` methods.
 
 ```ruby
 module AudioGlueHelper
-  # The some-speaking-service is supposed to return audio file
+  # The some-speaking-service is supposed to return audio file:
   def say(text)
     url("http://some-speaking-service.com/say/#{text}")
   end
 end
 ```
 
-Now you can use `say` method in `body` template section:
+Now you can use the `say` method in the `body` template section:
 
 ```ruby
 body {

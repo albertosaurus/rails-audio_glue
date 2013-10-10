@@ -9,7 +9,8 @@ module RailsAudioGlue
 
       # :nodoc:
       def create_template
-        template 'template.glue.erb', "#{RailsAudioGlue::TEMPLATES_PATH}/#{template_name}.glue"
+        template 'template.glue.erb',
+                 "#{RailsAudioGlue::TEMPLATES_PATH}/#{template_name}.glue"
       end
 
     end

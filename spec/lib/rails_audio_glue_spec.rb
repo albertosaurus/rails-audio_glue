@@ -9,4 +9,3 @@ describe RailsAudioGlue do
   it { should respond_to :loader  }
   it { should respond_to :loader= }
 end
-
