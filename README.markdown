@@ -95,6 +95,22 @@ body {
 ```
 
 
+## Testing
+
+### Requirements
+
+You must have the `sqlite3` package installed.
+
+### Running the Tests
+
+```sh
+  bundle
+  cd spec/dummy
+  rake db:setup db:migrate
+  cd -
+  rake spec
+```
+
 ## Credits
 
 * [Sergey Potapov](https://github.com/greyblake)
