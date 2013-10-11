@@ -6,12 +6,6 @@ GIT
     audio_glue (0.0.1)
       ruby-sox
 
-GIT
-  remote: git@github.com:TMXCredit/ruby-sox.git
-  revision: 3f6e51343e69f0e462a2455301b75c2b713923d2
-  specs:
-    ruby-sox (0.0.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -227,6 +221,7 @@ GEM
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
     ruby-progressbar (1.2.0)
+    ruby-sox (0.0.1)
     ruby2ruby (2.0.6)
       ruby_parser (~> 3.1)
       sexp_processor (~> 4.0)
@@ -268,7 +263,6 @@ DEPENDENCIES
   rails (> 3.0)
   rspec (~> 2.14.1)
   rspec-rails (~> 2.14.0)
-  ruby-sox!
   simplecov
   simplecov-rcov-text
   sqlite3

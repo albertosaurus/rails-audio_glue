@@ -1,8 +1,5 @@
 source "https://rubygems.org"
 
-# TODO: remove when it's released at rubygems
-gem 'ruby-sox', :git => 'git@github.com:TMXCredit/ruby-sox.git'
-
 gem 'audio_glue', :git => 'git@github.com:TMXCredit/audio_glue.git', :branch => '12148_audio_glue'
 gem 'rails', '> 3.0'
 
