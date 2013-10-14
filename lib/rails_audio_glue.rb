@@ -1,3 +1,5 @@
+require 'audio_glue'
+
 require 'rails_audio_glue/controller_methods'
 require 'rails_audio_glue/engine'
 
