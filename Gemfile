@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
-gem 'audio_glue', :git => 'git@github.com:TMXCredit/audio_glue.git', :branch => '12148_audio_glue'
+gem 'audio_glue'
+gem 'audio_glue-sox_adapter', :git => "git@github.com:TMXCredit/audio_glue-sox_adapter.git"
 gem 'rails', '> 3.0'
 
 
