@@ -1,8 +1,7 @@
 source "https://rubygems.org"
 
-gem 'audio_glue'
-gem 'audio_glue-sox_adapter', :git => "git@github.com:TMXCredit/audio_glue-sox_adapter.git"
-gem 'rails', '> 3.0'
+gem 'audio_glue', '~> 0.1.0'
+gem 'rails'     , '> 3.0'
 
 
 group :development do
@@ -16,9 +15,11 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'pry'
+  gem 'audio_glue-sox_adapter', '~> 0.0.1'
 
   # code metrics:
   gem "metric_fu"
+
 end
 
 group :test do
