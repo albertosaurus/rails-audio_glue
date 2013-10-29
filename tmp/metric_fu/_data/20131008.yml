@@ -1,0 +1,746 @@
+---
+:cane:
+  :total_violations: 26
+  :violations:
+    :line_style:
+    - :line: spec/dummy/config/application.rb:10
+      :description: Line is >80 characters (82)
+    - :line: spec/dummy/config/application.rb:17
+      :description: Line is >80 characters (85)
+    - :line: spec/dummy/config/application.rb:22
+      :description: Line is >80 characters (83)
+    - :line: spec/dummy/config/application.rb:24
+      :description: Line is >80 characters (99)
+    - :line: spec/dummy/config/application.rb:25
+      :description: Line is >80 characters (89)
+    - :line: spec/dummy/config/application.rb:28
+      :description: Line is >80 characters (98)
+    - :line: spec/dummy/config/application.rb:29
+      :description: Line is >80 characters (87)
+    - :line: spec/dummy/config/application.rb:41
+      :description: Line is >80 characters (82)
+    - :line: spec/dummy/config/application.rb:42
+      :description: Line is >80 characters (87)
+    - :line: spec/dummy/config/application.rb:47
+      :description: Line is >80 characters (100)
+    - :line: spec/dummy/config/application.rb:48
+      :description: Line is >80 characters (97)
+    - :line: spec/dummy/config/environments/development.rb:2
+      :description: Line is >80 characters (84)
+    - :line: spec/dummy/config/environments/production.rb:2
+      :description: Line is >80 characters (84)
+    - :line: spec/dummy/config/environments/production.rb:30
+      :description: Line is >80 characters (96)
+    - :line: spec/dummy/config/environments/production.rb:48
+      :description: Line is >80 characters (104)
+    - :line: spec/dummy/config/environments/test.rb:2
+      :description: Line is >80 characters (84)
+    - :line: spec/dummy/config/initializers/audio_glue.rb:7
+      :description: Line is >80 characters (83)
+    - :line: spec/dummy/config/initializers/audio_glue.rb:8
+      :description: Line is >80 characters (93)
+    - :line: spec/dummy/config/initializers/backtrace_silencers.rb:3
+      :description: Line is >80 characters (107)
+    - :line: spec/dummy/config/initializers/backtrace_silencers.rb:6
+      :description: Line is >80 characters (112)
+    - :line: spec/dummy/config/initializers/secret_token.rb:7
+      :description: Line is >80 characters (171)
+    - :line: spec/dummy/config/initializers/wrap_parameters.rb:6
+      :description: Line is >80 characters (96)
+    - :line: spec/dummy/config/routes.rb:57
+      :description: Line is >80 characters (91)
+    - :line: spec/dummy/config/routes.rb:58
+      :description: Line is >80 characters (91)
+    - :line: spec/dummy/db/schema.rb:4
+      :description: Line is >80 characters (81)
+    - :line: spec/dummy/db/schema.rb:9
+      :description: Line is >80 characters (86)
+:churn:
+  :changes: []
+  :class_churn: []
+  :method_churn: []
+  :changed_files: []
+  :changed_classes: []
+  :changed_methods: []
+:flay:
+  :total_score: '0'
+  :matches: []
+:flog:
+  :total: 39.444241398711796
+  :average: 3.5858401271556177
+  :method_containers:
+  - :name: RailsAudioGlue::ControllerMethods
+    :path: lib/rails_audio_glue/controller_methods.rb
+    :total_score: 18.144241398711788
+    :highest_score: 16.41219059114291
+    :average_score: 9.072120699355894
+    :methods:
+      RailsAudioGlue::ControllerMethods#send_glued_audio:
+        :operators:
+          :assignment: 5.0
+          :branch: 1.0
+          :env: 1.2
+          :development?: 1.0
+          :loader: 2.7
+          :reset_cache!: 1.1
+          :get: 1.2
+          :new: 1.0
+          :builder: 1.2
+          :build: 1.0
+          :basename: 1.0
+          :format: 2.2
+          :[]: 1.0
+          :send_data: 1.0
+        :score: 16.41219059114291
+        :path: lib/rails_audio_glue/controller_methods.rb:23
+      RailsAudioGlue::ControllerMethods#none:
+        :operators:
+          :assignment: 1.0
+          :branch: 1.0
+          :lambda: 1.0
+        :score: 1.7320508075688772
+        :path: 
+  - :name: main
+    :path: ''
+    :total_score: 4.4
+    :highest_score: 4.4
+    :average_score: 4.4
+    :methods:
+      main#none:
+        :operators:
+          :expand_path: 1.2
+          :require: 3.2
+        :score: 4.4
+        :path: 
+  - :name: RailsAudioGlue::Engine::initializer
+    :path: lib/rails_audio_glue/engine.rb
+    :total_score: 4.0
+    :highest_score: 4.0
+    :average_score: 4.0
+    :methods:
+      RailsAudioGlue::Engine::initializer#audio_glue:
+        :operators:
+          :initializer: 1.0
+          :send: 3.0
+        :score: 4.0
+        :path: lib/rails_audio_glue/engine.rb:4
+  - :name: RailsAudioGlue::Generators::TemplateGenerator
+    :path: lib/generators/rails_audio_glue/template/template_generator.rb
+    :total_score: 5.4
+    :highest_score: 3.2
+    :average_score: 2.7
+    :methods:
+      RailsAudioGlue::Generators::TemplateGenerator#none:
+        :operators:
+          :expand_path: 1.2
+          :source_root: 1.0
+          :argument: 1.0
+        :score: 3.2
+        :path: 
+      RailsAudioGlue::Generators::TemplateGenerator#create_template:
+        :operators:
+          :template_name: 1.2
+          :template: 1.0
+        :score: 2.2
+        :path: lib/generators/rails_audio_glue/template/template_generator.rb:11
+  - :name: RailsAudioGlue
+    :path: ''
+    :total_score: 2.2
+    :highest_score: 2.2
+    :average_score: 2.2
+    :methods:
+      RailsAudioGlue#none:
+        :operators:
+          :mattr_accessor: 2.2
+        :score: 2.2
+        :path: 
+  - :name: RailsAudioGlue::Generators::InstallGenerator
+    :path: lib/generators/rails_audio_glue/install/install_generator.rb
+    :total_score: 4.2
+    :highest_score: 2.2
+    :average_score: 1.4000000000000001
+    :methods:
+      RailsAudioGlue::Generators::InstallGenerator#none:
+        :operators:
+          :expand_path: 1.2
+          :source_root: 1.0
+        :score: 2.2
+        :path: 
+      RailsAudioGlue::Generators::InstallGenerator#create_initializer_file:
+        :operators:
+          :template: 1.0
+        :score: 1.0
+        :path: lib/generators/rails_audio_glue/install/install_generator.rb:9
+      RailsAudioGlue::Generators::InstallGenerator#create_audio_glue_helper:
+        :operators:
+          :template: 1.0
+        :score: 1.0
+        :path: lib/generators/rails_audio_glue/install/install_generator.rb:14
+  - :name: RailsAudioGlue::setup
+    :path: lib/rails_audio_glue.rb
+    :total_score: 1.1
+    :highest_score: 1.1
+    :average_score: 1.1
+    :methods:
+      RailsAudioGlue::setup:
+        :operators:
+          :yield: 1.1
+        :score: 1.1
+        :path: lib/rails_audio_glue.rb:16
+:saikuro:
+  :files:
+  - :classes:
+    - :class_name: RailsAudioGlue
+      :complexity: 0
+      :lines: 3
+      :methods: []
+    - :class_name: RailsAudioGlue::ControllerMethods
+      :complexity: 3
+      :lines: 33
+      :methods:
+      - :name: RailsAudioGlue::ControllerMethods#send_glued_audio
+        :complexity: 2
+        :lines: 12
+    :filename: lib/rails_audio_glue/controller_methods.rb
+  - :classes:
+    - :class_name: RailsAudioGlue
+      :complexity: 0
+      :lines: 3
+      :methods: []
+    - :class_name: RailsAudioGlue::Generators
+      :complexity: 0
+      :lines: 3
+      :methods: []
+    - :class_name: RailsAudioGlue::Generators::InstallGenerator
+      :complexity: 2
+      :lines: 14
+      :methods:
+      - :name: RailsAudioGlue::Generators::InstallGenerator#create_audio_glue_helper
+        :complexity: 1
+        :lines: 3
+      - :name: RailsAudioGlue::Generators::InstallGenerator#create_initializer_file
+        :complexity: 1
+        :lines: 2
+    :filename: lib/generators/rails_audio_glue/install/install_generator.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 1
+      :lines: 3
+      :methods: []
+    :filename: lib/generators/rails_audio_glue/template/templates/template.glue.erb
+  - :classes:
+    - :class_name: RailsAudioGlue
+      :complexity: 0
+      :lines: 3
+      :methods: []
+    - :class_name: RailsAudioGlue::Engine
+      :complexity: 1
+      :lines: 4
+      :methods: []
+    :filename: lib/rails_audio_glue/engine.rb
+  - :classes:
+    - :class_name: RailsAudioGlue
+      :complexity: 0
+      :lines: 3
+      :methods: []
+    - :class_name: RailsAudioGlue::Generators
+      :complexity: 0
+      :lines: 3
+      :methods: []
+    - :class_name: RailsAudioGlue::Generators::TemplateGenerator
+      :complexity: 1
+      :lines: 11
+      :methods:
+      - :name: RailsAudioGlue::Generators::TemplateGenerator#create_template
+        :complexity: 1
+        :lines: 3
+    :filename: lib/generators/rails_audio_glue/template/template_generator.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: RailsAudioGlue
+      :complexity: 1
+      :lines: 14
+      :methods:
+      - :name: RailsAudioGlue#self.setup
+        :complexity: 1
+        :lines: 2
+    :filename: lib/rails_audio_glue.rb
+  - :classes:
+    - :class_name: ''
+      :complexity: 1
+      :lines: 12
+      :methods: []
+    :filename: lib/generators/rails_audio_glue/install/templates/initializer.rb.erb
+  - :classes:
+    - :class_name: ''
+      :complexity: 0
+      :lines: 1
+      :methods: []
+    - :class_name: AudioGlueHelper
+      :complexity: 0
+      :lines: 2
+      :methods: []
+    :filename: lib/generators/rails_audio_glue/install/templates/audio_glue_helper.rb.erb
+  :classes:
+  - :name: RailsAudioGlue::ControllerMethods
+    :complexity: 3
+    :lines: 33
+    :defs:
+    - :name: RailsAudioGlue::ControllerMethods#send_glued_audio
+      :complexity: 2
+      :lines: 12
+  - :name: RailsAudioGlue::Generators::InstallGenerator
+    :complexity: 2
+    :lines: 14
+    :defs:
+    - :name: RailsAudioGlue::Generators::InstallGenerator#create_initializer_file
+      :complexity: 1
+      :lines: 2
+    - :name: RailsAudioGlue::Generators::InstallGenerator#create_audio_glue_helper
+      :complexity: 1
+      :lines: 3
+  - :name: RailsAudioGlue
+    :complexity: 1
+    :lines: 14
+    :defs:
+    - :name: RailsAudioGlue#self.setup
+      :complexity: 1
+      :lines: 2
+  - :name: ''
+    :complexity: 1
+    :lines: 12
+  - :name: ''
+    :complexity: 1
+    :lines: 3
+  - :name: RailsAudioGlue::Generators::TemplateGenerator
+    :complexity: 1
+    :lines: 11
+    :defs:
+    - :name: RailsAudioGlue::Generators::TemplateGenerator#create_template
+      :complexity: 1
+      :lines: 3
+  - :name: RailsAudioGlue::Engine
+    :complexity: 1
+    :lines: 4
+  - :name: RailsAudioGlue
+    :complexity: 0
+    :lines: 3
+  - :name: RailsAudioGlue::Generators
+    :complexity: 0
+    :lines: 3
+  - :name: RailsAudioGlue
+    :complexity: 0
+    :lines: 3
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: ''
+    :complexity: 0
+    :lines: 1
+  - :name: RailsAudioGlue::Generators
+    :complexity: 0
+    :lines: 3
+  - :name: RailsAudioGlue
+    :complexity: 0
+    :lines: 3
+  - :name: AudioGlueHelper
+    :complexity: 0
+    :lines: 2
+  - :name: RailsAudioGlue
+    :complexity: 0
+    :lines: 3
+  :methods:
+  - :name: RailsAudioGlue::ControllerMethods#send_glued_audio
+    :complexity: 2
+    :lines: 12
+  - :name: RailsAudioGlue::Generators::InstallGenerator#create_audio_glue_helper
+    :complexity: 1
+    :lines: 3
+  - :name: RailsAudioGlue::Generators::TemplateGenerator#create_template
+    :complexity: 1
+    :lines: 3
+  - :name: RailsAudioGlue::Generators::InstallGenerator#create_initializer_file
+    :complexity: 1
+    :lines: 2
+  - :name: RailsAudioGlue#self.setup
+    :complexity: 1
+    :lines: 2
+:reek:
+  :matches:
+  - :file_path: lib/generators/rails_audio_glue/install/install_generator.rb
+    :code_smells:
+    - :method: RailsAudioGlue::Generators::InstallGenerator
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: lib/generators/rails_audio_glue/template/template_generator.rb
+    :code_smells:
+    - :method: RailsAudioGlue::Generators::TemplateGenerator
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: lib/rails-audio_glue.rb
+    :code_smells: []
+  - :file_path: lib/rails_audio_glue.rb
+    :code_smells: []
+  - :file_path: lib/rails_audio_glue/controller_methods.rb
+    :code_smells:
+    - :method: RailsAudioGlue::ControllerMethods#send_glued_audio
+      :message: calls RailsAudioGlue.loader twice
+      :type: DuplicateMethodCall
+    - :method: RailsAudioGlue::ControllerMethods#send_glued_audio
+      :message: calls template.format twice
+      :type: DuplicateMethodCall
+    - :method: RailsAudioGlue::ControllerMethods#send_glued_audio
+      :message: has approx 6 statements
+      :type: TooManyStatements
+    - :method: RailsAudioGlue::ControllerMethods#send_glued_audio
+      :message: refers to template more than self
+      :type: FeatureEnvy
+  - :file_path: lib/rails_audio_glue/engine.rb
+    :code_smells:
+    - :method: RailsAudioGlue::Engine
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+:roodi:
+  :total:
+  - Found 0 errors.
+  :problems: []
+:stats:
+  :codeLOC: 65
+  :testLOC: 22
+  :code_to_test_ratio: 0.3
+  :lines:
+  - :name: Libraries
+    :lines: 104
+    :loc: 65
+    :classes: 3
+    :methods: 5
+    :methods_per_class: 1
+    :loc_per_method: 11
+  - :name: Controllers specs
+    :lines: 18
+    :loc: 14
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Lib specs
+    :lines: 12
+    :loc: 8
+    :classes: 0
+    :methods: 0
+    :methods_per_class: 0
+    :loc_per_method: 0
+  - :name: Total
+    :lines: 134
+    :loc: 87
+    :classes: 3
+    :methods: 5
+    :methods_per_class: 1
+    :loc_per_method: 15
+:hotspots:
+  files:
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/rails_audio_glue/controller_methods.rb:23
+      file_name: lib/rails_audio_glue/controller_methods.rb
+      line_number: '23'
+      hash_key: '["lib/rails_audio_glue/controller_methods.rb:23", nil, nil]'
+    details:
+      flog: complexity is 16.4
+      saikuro: complexity is 2.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/rails_audio_glue/engine.rb:4
+      file_name: lib/rails_audio_glue/engine.rb
+      line_number: '4'
+      hash_key: '["lib/rails_audio_glue/engine.rb:4", nil, nil]'
+    details:
+      flog: complexity is 4.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/generators/rails_audio_glue/template/template_generator.rb:11
+      file_name: lib/generators/rails_audio_glue/template/template_generator.rb
+      line_number: '11'
+      hash_key: '["lib/generators/rails_audio_glue/template/template_generator.rb:11",
+        nil, nil]'
+    details:
+      flog: complexity is 2.2
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/rails_audio_glue.rb:16
+      file_name: lib/rails_audio_glue.rb
+      line_number: '16'
+      hash_key: '["lib/rails_audio_glue.rb:16", nil, nil]'
+    details:
+      flog: complexity is 1.1
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/generators/rails_audio_glue/install/install_generator.rb:14
+      file_name: lib/generators/rails_audio_glue/install/install_generator.rb
+      line_number: '14'
+      hash_key: '["lib/generators/rails_audio_glue/install/install_generator.rb:14",
+        nil, nil]'
+    details:
+      flog: complexity is 1.0
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/generators/rails_audio_glue/install/install_generator.rb:9
+      file_name: lib/generators/rails_audio_glue/install/install_generator.rb
+      line_number: '9'
+      hash_key: '["lib/generators/rails_audio_glue/install/install_generator.rb:9",
+        nil, nil]'
+    details:
+      flog: complexity is 1.0
+      saikuro: complexity is 1.0
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/rails_audio_glue/controller_methods.rb
+      file_name: lib/rails_audio_glue/controller_methods.rb
+      line_number: 
+      hash_key: '["lib/rails_audio_glue/controller_methods.rb", nil, nil]'
+    details:
+      reek: found 4 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/generators/rails_audio_glue/install/install_generator.rb
+      file_name: lib/generators/rails_audio_glue/install/install_generator.rb
+      line_number: 
+      hash_key: '["lib/generators/rails_audio_glue/install/install_generator.rb",
+        nil, nil]'
+    details:
+      reek: found 1 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/generators/rails_audio_glue/template/template_generator.rb
+      file_name: lib/generators/rails_audio_glue/template/template_generator.rb
+      line_number: 
+      hash_key: '["lib/generators/rails_audio_glue/template/template_generator.rb",
+        nil, nil]'
+    details:
+      reek: found 1 code smells
+  - location:
+      class_name: 
+      method_name: 
+      file_path: lib/rails_audio_glue/engine.rb
+      file_name: lib/rails_audio_glue/engine.rb
+      line_number: 
+      hash_key: '["lib/rails_audio_glue/engine.rb", nil, nil]'
+    details:
+      reek: found 1 code smells
+  classes:
+  - location:
+      class_name: ControllerMethods
+      method_name: 
+      file_path: lib/rails_audio_glue/controller_methods.rb:23
+      file_name: lib/rails_audio_glue/controller_methods.rb
+      line_number: '23'
+      hash_key: '["lib/rails_audio_glue/controller_methods.rb:23", "ControllerMethods",
+        nil]'
+    details:
+      flog: average complexity is 9.1
+      reek: found 4 code smells
+      saikuro: complexity is 2.0
+  - location:
+      class_name: main
+      method_name: 
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "main", nil]'
+    details:
+      flog: complexity is 4.4
+  - location:
+      class_name: initializer
+      method_name: 
+      file_path: lib/rails_audio_glue/engine.rb:4
+      file_name: lib/rails_audio_glue/engine.rb
+      line_number: '4'
+      hash_key: '["lib/rails_audio_glue/engine.rb:4", "initializer", nil]'
+    details:
+      flog: complexity is 4.0
+  - location:
+      class_name: TemplateGenerator
+      method_name: 
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "TemplateGenerator", nil]'
+    details:
+      flog: average complexity is 2.7
+      reek: found 1 code smells
+      saikuro: complexity is 1.0
+  - location:
+      class_name: InstallGenerator
+      method_name: 
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "InstallGenerator", nil]'
+    details:
+      flog: average complexity is 1.4
+      reek: found 1 code smells
+      saikuro: average complexity is 1.0
+  - location:
+      class_name: RailsAudioGlue
+      method_name: 
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "RailsAudioGlue", nil]'
+    details:
+      flog: average complexity is 1.7
+      saikuro: complexity is 1.0
+  - location:
+      class_name: Engine
+      method_name: 
+      file_path: lib/rails_audio_glue/engine.rb
+      file_name: lib/rails_audio_glue/engine.rb
+      line_number: 
+      hash_key: '["lib/rails_audio_glue/engine.rb", "Engine", nil]'
+    details:
+      reek: found 1 code smells
+  methods:
+  - location:
+      class_name: ControllerMethods
+      method_name: ControllerMethods#send_glued_audio
+      file_path: lib/rails_audio_glue/controller_methods.rb:23
+      file_name: lib/rails_audio_glue/controller_methods.rb
+      line_number: '23'
+      hash_key: '["lib/rails_audio_glue/controller_methods.rb:23", "ControllerMethods",
+        "ControllerMethods#send_glued_audio"]'
+      simple_method_name: '#send_glued_audio'
+    details:
+      flog: complexity is 16.4
+      reek: found 4 code smells
+      saikuro: complexity is 2.0
+  - location:
+      class_name: main
+      method_name: main#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "main", "main#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 4.4
+  - location:
+      class_name: initializer
+      method_name: initializer#audio_glue
+      file_path: lib/rails_audio_glue/engine.rb:4
+      file_name: lib/rails_audio_glue/engine.rb
+      line_number: '4'
+      hash_key: '["lib/rails_audio_glue/engine.rb:4", "initializer", "initializer#audio_glue"]'
+      simple_method_name: '#audio_glue'
+    details:
+      flog: complexity is 4.0
+  - location:
+      class_name: TemplateGenerator
+      method_name: TemplateGenerator#create_template
+      file_path: lib/generators/rails_audio_glue/template/template_generator.rb:11
+      file_name: lib/generators/rails_audio_glue/template/template_generator.rb
+      line_number: '11'
+      hash_key: '["lib/generators/rails_audio_glue/template/template_generator.rb:11",
+        "TemplateGenerator", "TemplateGenerator#create_template"]'
+      simple_method_name: '#create_template'
+    details:
+      flog: complexity is 2.2
+      saikuro: complexity is 1.0
+  - location:
+      class_name: TemplateGenerator
+      method_name: TemplateGenerator#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "TemplateGenerator", "TemplateGenerator#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 3.2
+  - location:
+      class_name: InstallGenerator
+      method_name: InstallGenerator#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "InstallGenerator", "InstallGenerator#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 2.2
+  - location:
+      class_name: RailsAudioGlue
+      method_name: RailsAudioGlue#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "RailsAudioGlue", "RailsAudioGlue#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 2.2
+  - location:
+      class_name: InstallGenerator
+      method_name: InstallGenerator#create_audio_glue_helper
+      file_path: lib/generators/rails_audio_glue/install/install_generator.rb:14
+      file_name: lib/generators/rails_audio_glue/install/install_generator.rb
+      line_number: '14'
+      hash_key: '["lib/generators/rails_audio_glue/install/install_generator.rb:14",
+        "InstallGenerator", "InstallGenerator#create_audio_glue_helper"]'
+      simple_method_name: '#create_audio_glue_helper'
+    details:
+      flog: complexity is 1.0
+      saikuro: complexity is 1.0
+  - location:
+      class_name: InstallGenerator
+      method_name: InstallGenerator#create_initializer_file
+      file_path: lib/generators/rails_audio_glue/install/install_generator.rb:9
+      file_name: lib/generators/rails_audio_glue/install/install_generator.rb
+      line_number: '9'
+      hash_key: '["lib/generators/rails_audio_glue/install/install_generator.rb:9",
+        "InstallGenerator", "InstallGenerator#create_initializer_file"]'
+      simple_method_name: '#create_initializer_file'
+    details:
+      flog: complexity is 1.0
+      saikuro: complexity is 1.0
+  - location:
+      class_name: ControllerMethods
+      method_name: ControllerMethods#none
+      file_path: 
+      file_name: 
+      line_number: 
+      hash_key: '[nil, "ControllerMethods", "ControllerMethods#none"]'
+      simple_method_name: '#none'
+    details:
+      flog: complexity is 1.7
+  - location:
+      class_name: RailsAudioGlue
+      method_name: RailsAudioGlue#setup
+      file_path: lib/rails_audio_glue.rb:16
+      file_name: lib/rails_audio_glue.rb
+      line_number: '16'
+      hash_key: '["lib/rails_audio_glue.rb:16", "RailsAudioGlue", "RailsAudioGlue#setup"]'
+      simple_method_name: '#setup'
+    details:
+      flog: complexity is 1.1
+  - location:
+      class_name: RailsAudioGlue
+      method_name: RailsAudioGlue#self.setup
+      file_path: lib/rails_audio_glue.rb:16
+      file_name: lib/rails_audio_glue.rb
+      line_number: '16'
+      hash_key: '["lib/rails_audio_glue.rb:16", "RailsAudioGlue", "RailsAudioGlue#self.setup"]'
+      simple_method_name: '#self.setup'
+    details:
+      saikuro: complexity is 1.0

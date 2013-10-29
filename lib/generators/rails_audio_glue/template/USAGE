@@ -1,0 +1,8 @@
+Description:
+    Create audio glue template
+
+Example:
+    rails generate rails_audio_glue:template hello_world
+
+    This will:
+        Create template: app/audio_templates/hello_world.glue

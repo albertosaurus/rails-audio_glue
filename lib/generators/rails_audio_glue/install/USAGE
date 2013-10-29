@@ -1,0 +1,9 @@
+Description:
+    Create initial files for AudioGlue engine.
+
+Example:
+    rails generate rails_audio_glue:install
+
+    This will:
+        Create initializer: config/initializers/audio_glue.rb
+        Create helper:      app/audio_templates/audio_glue_helper.rb
