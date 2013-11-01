@@ -3,4 +3,6 @@ rvm:
   - "1.9.3"
   - "2.0.0"
 script: "bundle exec rake spec"
+before_install:
+ - sudo apt-get install libchromaprint-dev
 
