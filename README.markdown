@@ -1,4 +1,5 @@
 # Rails AudioGlue
+[![Build Status](https://travis-ci.org/TMXCredit/rails-audio_glue.png)](https://travis-ci.org/TMXCredit/rails-audio_glue)
 
 A Rails plugin which integrates AudioGlue - a library used to assemble audio
 from snippets using templates.
